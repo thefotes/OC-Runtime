@@ -21,6 +21,7 @@
 		C967C0C31831BC63008EDFBC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C967C0A51831BC63008EDFBC /* UIKit.framework */; };
 		C967C0CB1831BC63008EDFBC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C967C0C91831BC63008EDFBC /* InfoPlist.strings */; };
 		C967C0CD1831BC63008EDFBC /* OC_RuntimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C967C0CC1831BC63008EDFBC /* OC_RuntimeTests.m */; };
+		C967C0D81831BC99008EDFBC /* OCRuntimeWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C967C0D71831BC99008EDFBC /* OCRuntimeWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		C967C0C81831BC63008EDFBC /* OC-RuntimeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OC-RuntimeTests-Info.plist"; sourceTree = "<group>"; };
 		C967C0CA1831BC63008EDFBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C967C0CC1831BC63008EDFBC /* OC_RuntimeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OC_RuntimeTests.m; sourceTree = "<group>"; };
+		C967C0D61831BC99008EDFBC /* OCRuntimeWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OCRuntimeWrapper.h; path = ../OCRuntimeWrapper.h; sourceTree = "<group>"; };
+		C967C0D71831BC99008EDFBC /* OCRuntimeWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OCRuntimeWrapper.m; path = ../OCRuntimeWrapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,7 @@
 				C967C0B31831BC63008EDFBC /* Main.storyboard */,
 				C967C0B61831BC63008EDFBC /* OCRViewController.h */,
 				C967C0B71831BC63008EDFBC /* OCRViewController.m */,
+				C967C0D91831BCA0008EDFBC /* Wrapper */,
 				C967C0B91831BC63008EDFBC /* Images.xcassets */,
 				C967C0A81831BC63008EDFBC /* Supporting Files */,
 			);
@@ -150,6 +154,15 @@
 				C967C0C91831BC63008EDFBC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C967C0D91831BCA0008EDFBC /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				C967C0D61831BC99008EDFBC /* OCRuntimeWrapper.h */,
+				C967C0D71831BC99008EDFBC /* OCRuntimeWrapper.m */,
+			);
+			name = Wrapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C967C0D81831BC99008EDFBC /* OCRuntimeWrapper.m in Sources */,
 				C967C0AE1831BC63008EDFBC /* main.m in Sources */,
 				C967C0B21831BC63008EDFBC /* OCRAppDelegate.m in Sources */,
 				C967C0B81831BC63008EDFBC /* OCRViewController.m in Sources */,

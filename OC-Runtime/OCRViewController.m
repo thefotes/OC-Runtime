@@ -7,6 +7,7 @@
 //
 
 #import "OCRViewController.h"
+#import "OCRuntimeWrapper.h"
 
 @interface OCRViewController ()
 
@@ -17,13 +18,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
+    OCRuntimeWrapper *wrap = [OCRuntimeWrapper sharedWrapper];
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [wrap allocateClassWithName:@"myClass" fromSuperClass:[NSObject class]];
+    [wrap addInstanceVariableWithName:@"boobs" toClass:wrap];
+    [wrap createSetterAndGetterForIvarNamed:@"boobs" onClass:wrap];
+    id myClass = [[[wrap classWithClass] alloc] init];
+    [myClass performSelector:@selector(setNamez:) withObject:@"peter"];
+    
+    NSLog(@"Name: %@", [myClass performSelector:NSSelectorFromString(@"boobs") withObject:nil]);
+
 }
 
 @end
